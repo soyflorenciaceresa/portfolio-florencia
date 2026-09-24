@@ -10,6 +10,11 @@ html, body {
   height: 100%;
 }
 
+html.nav-open,
+body.nav-open {
+  overflow: hidden;
+}
+
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #1a1a1a;
@@ -60,10 +65,12 @@ p, h1, h2, h3 {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 15;
 }
 
 .logo {
+  position: relative;
+  z-index: 22;
   font-size: 0.85rem;
   letter-spacing: 0.01em;
 }
@@ -84,6 +91,27 @@ p, h1, h2, h3 {
 
 .main-nav a.current {
   color: #a3a3a3;
+}
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 24px;
+  height: 18px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 21;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #1a1a1a;
 }
 
 /* ---------- Hero / gallery ---------- */
@@ -461,6 +489,51 @@ p, h1, h2, h3 {
 
 @media (max-width: 640px) {
 
+  .hero-text {
+    width: 80%;
+  }
+
+  .ph-1 {
+    width: 20.4% !important;
+  }
+
+  .ph-2 {
+    left: 31.4% !important;
+    top: 2% !important;
+    width: 37.2% !important;
+  }
+
+  .ph-3 {
+    display: none !important;
+  }
+
+  .ph-4 {
+    left: 36.6% !important;
+    top: 23.7% !important;
+    width: 19.2% !important;
+  }
+
+  .ph-5 {
+    top: 57% !important;
+    width: 19.2% !important;
+  }
+
+  .ph-6 {
+    left: auto !important;
+    right: 0 !important;
+    top: 23% !important;
+    width: 26% !important;
+  }
+
+  .ph-7 {
+    width: 41.2% !important;
+  }
+
+  .ph-8 {
+    bottom: 40px !important;
+    width: 26.4% !important;
+  }
+
   .site-header {
     padding: 18px 20px;
   }
@@ -469,12 +542,44 @@ p, h1, h2, h3 {
     font-size: 0.8rem;
   }
 
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu-toggle.is-open span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .menu-toggle.is-open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.is-open span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
   .main-nav {
-    gap: 1.1rem;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    height: 100dvh;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 84px 20px 32px;
+    background: #ffffff;
+    z-index: 20;
+  }
+
+  .main-nav.is-open {
+    display: flex;
   }
 
   .main-nav a {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 
   .contact-heading {
