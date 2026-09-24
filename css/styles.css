@@ -43,6 +43,10 @@ p, h1, h2, h3 {
   font-weight: 400;
 }
 
+:root {
+  --header-h: 72px;
+}
+
 /* ---------- Page shell (100% of viewport) ---------- */
 .page {
   position: relative;
@@ -50,33 +54,36 @@ p, h1, h2, h3 {
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
+  padding-top: var(--header-h);
+}
+
+.site {
+  padding-top: var(--header-h);
 }
 
 /* ---------- Header ---------- */
 .site-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 2.4vh 2.4vw;
-}
-
-.page > .site-header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 15;
+  z-index: 30;
+  height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2.4vw;
+  background: #ffffff;
 }
 
 .logo {
-  position: relative;
-  z-index: 22;
   font-size: 0.85rem;
   letter-spacing: 0.01em;
 }
 
 .main-nav {
   display: flex;
+  align-items: center;
   gap: 2.2rem;
 }
 
@@ -104,7 +111,6 @@ p, h1, h2, h3 {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 21;
 }
 
 .menu-toggle span {
@@ -155,7 +161,7 @@ p, h1, h2, h3 {
 
 /* ---------- Footer ---------- */
 .site-footer {
-  padding: 60px 2.4vw 24px;
+  padding: 48px 2.4vw 24px;
 }
 
 .page > .site-footer {
@@ -175,7 +181,7 @@ p, h1, h2, h3 {
 .about-content {
   margin-left: 50%;
   width: 48%;
-  padding: 14.5vh 1.75% 0 0;
+  padding: 4.5vh 1.75% 0 0;
 }
 
 .about-intro p {
@@ -190,7 +196,7 @@ p, h1, h2, h3 {
 }
 
 .about-sections {
-  margin-top: 4.5rem;
+  margin-top: 3rem;
 }
 
 .about-section {
@@ -204,6 +210,10 @@ p, h1, h2, h3 {
   padding-top: 0;
 }
 
+.about-section:last-child {
+  padding-bottom: 0;
+}
+
 .about-label {
   flex: 0 0 46%;
   font-size: 0.85rem;
@@ -215,6 +225,10 @@ p, h1, h2, h3 {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+.about-entries-tight {
+  gap: 0;
 }
 
 .about-entry .entry-title {
@@ -234,7 +248,7 @@ p, h1, h2, h3 {
 
 /* ---------- Contact page ---------- */
 .contact-content {
-  padding: 18.6vh 2.4vw 0;
+  padding: 4.5vh 2.4vw 0;
 }
 
 .contact-heading {
@@ -252,13 +266,28 @@ p, h1, h2, h3 {
   color: #3a3a3a;
 }
 
+.contact-social {
+  display: flex;
+  gap: 2.2rem;
+  margin-top: 2rem;
+}
+
+.contact-social .contact-sub {
+  margin-top: 0;
+  transition: opacity 0.2s ease;
+}
+
+.contact-social .contact-sub:hover {
+  opacity: 0.6;
+}
+
 /* ---------- Work page ---------- */
 .work-content {
-  padding: 4.5vh 2.4vw 80px;
+  padding: 4.5vh 2.4vw 0;
 }
 
 .work-heading {
-  max-width: 1150px;
+  max-width: 50%;
   font-size: clamp(1.4rem, 2.4vw, 2.1rem);
   line-height: 1.1;
   color: #2b2b2b;
@@ -323,7 +352,7 @@ p, h1, h2, h3 {
 .work-number {
   margin-top: 1.2rem;
   font-size: 0.85rem;
-  color: #8a8a8a;
+  color: #1a1a1a;
 }
 
 .work-title {
@@ -339,15 +368,39 @@ p, h1, h2, h3 {
 }
 
 /* ---------- Project detail page ---------- */
+.project-page {
+  position: relative;
+}
+
 .project-intro {
   margin-left: 50%;
   width: 48%;
-  padding: 15vh 1.75% 0 0;
+  padding: 4.5vh 1.75% 0 0;
+}
+
+.project-back {
+  position: absolute;
+  top: 4.5vh;
+  left: 2.4vw;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #3a3a3a;
+  transition: opacity 0.2s ease;
+}
+
+.project-back:hover {
+  opacity: 0.6;
 }
 
 .intro-title {
-  font-size: 0.85rem;
-  color: #1a1a1a;
+  max-width: 1150px;
+  font-size: clamp(1.4rem, 2.4vw, 2.1rem);
+  line-height: 1.1;
+  color: #2b2b2b;
+  font-weight: 400;
 }
 
 .intro-text {
@@ -369,7 +422,7 @@ p, h1, h2, h3 {
 
 .project-gallery {
   margin-top: 4rem;
-  padding: 0 2.4vw 80px;
+  padding: 0 2.4vw 0;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -424,9 +477,12 @@ p, h1, h2, h3 {
     overflow: hidden;
   }
 
+  :root {
+    --header-h: 64px;
+  }
+
   .site-header {
-    position: static;
-    padding: 20px 24px;
+    padding: 0 24px;
   }
 
   .about-content {
@@ -451,7 +507,12 @@ p, h1, h2, h3 {
   .project-intro {
     margin-left: 0;
     width: 100%;
-    padding: 60px 24px 0;
+    padding: 30px 24px 0;
+  }
+
+  .project-back {
+    position: static;
+    margin: 0 0 2rem;
   }
 
   .intro-meta {
@@ -466,6 +527,10 @@ p, h1, h2, h3 {
 
   .work-content {
     padding: 30px 24px 60px;
+  }
+
+  .work-heading {
+    max-width: 100%;
   }
 
   .work-filters {
@@ -490,7 +555,7 @@ p, h1, h2, h3 {
 @media (max-width: 640px) {
 
   .hero-text {
-    width: 80%;
+    width: 90%;
   }
 
   .ph-1 {
@@ -534,8 +599,12 @@ p, h1, h2, h3 {
     width: 26.4% !important;
   }
 
+  :root {
+    --header-h: 56px;
+  }
+
   .site-header {
-    padding: 18px 20px;
+    padding: 0 20px;
   }
 
   .logo {
@@ -561,17 +630,17 @@ p, h1, h2, h3 {
   .main-nav {
     display: none;
     position: fixed;
-    top: 0;
+    top: var(--header-h);
     left: 0;
     right: 0;
-    height: 100vh;
-    height: 100dvh;
+    height: calc(100vh - var(--header-h));
+    height: calc(100dvh - var(--header-h));
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
-    padding: 84px 20px 32px;
+    padding: 32px 20px;
     background: #ffffff;
-    z-index: 20;
+    z-index: 25;
   }
 
   .main-nav.is-open {
@@ -579,7 +648,15 @@ p, h1, h2, h3 {
   }
 
   .main-nav a {
-    font-size: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .filter-btn {
+    font-size: 0.8rem;
+  }
+
+  .contact-content {
+    padding: 60px 20px 0;
   }
 
   .contact-heading {
@@ -591,11 +668,11 @@ p, h1, h2, h3 {
   }
 
   .work-content {
-    padding: 4px 20px 40px;
+    padding: 4px 20px 0;
   }
 
   .work-filters {
-    margin-top: 32px;
+    margin-top: 96px;
     gap: 1.2rem;
   }
 
@@ -609,7 +686,7 @@ p, h1, h2, h3 {
   }
 
   .intro-title {
-    font-size: 0.8rem;
+    font-size: 1.3rem;
   }
 
   .intro-text {
@@ -640,7 +717,7 @@ p, h1, h2, h3 {
   }
 
   .about-content {
-    padding: 4px 20px 20px;
+    padding: 4px 20px 0;
   }
 
   .about-intro p,
@@ -651,12 +728,17 @@ p, h1, h2, h3 {
     font-size: 0.8rem;
   }
 
+  .about-label {
+    font-weight: 700;
+  }
+
   .site-footer {
-    padding: 12px 20px 10px;
+    padding: 48px 20px 18px;
   }
 
   .page > .site-footer {
-    bottom: 10px;
+    left: 20px;
+    bottom: 18px;
   }
 
   .site-footer p {
