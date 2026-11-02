@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From a fragmented SaaS platform to a unified design system — Florencia Ceresa</title>
+<link rel="stylesheet" href="css/styles.css?v=66">
+</head>
+<body>
+<div class="site">
+
+  <header class="site-header">
+    <a class="logo" href="index.html">Florencia Ceresa</a>
+    <button type="button" class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="main-nav">
+      <a href="work.html">Work</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="project-page">
+
+    <div class="project-top">
+      <div class="project-head">
+        <a href="work.html" class="project-back"><span aria-hidden="true">&larr;</span> Return to work</a>
+        <h1 class="intro-title">From a fragmented SaaS platform to a unified design system</h1>
+      </div>
+      <section class="project-intro">
+        <div class="project-info">
+          <div class="info-col">
+            <div class="info-item">
+              <p class="info-label">Location</p>
+              <p class="info-value">Rosario, Argentina</p>
+            </div>
+            <div class="info-item">
+              <p class="info-label">Year</p>
+              <p class="info-value">2026</p>
+            </div>
+          </div>
+          <div class="info-col">
+            <div class="info-item">
+              <p class="info-label">Role</p>
+              <p class="info-value">Product Designer</p>
+            </div>
+            <div class="info-item">
+              <p class="info-label">Scope</p>
+              <p class="info-value">Design system</p>
+            </div>
+          </div>
+        </div>
+        <p class="intro-text">Building a shared foundation to align visual design, frontend implementation, and AI-assisted prototyping.</p>
+        <p class="intro-text detail-sub">A growing platform with increasingly complex needs</p>
+        <p class="intro-text">Pharo is an enterprise software platform for port management and logistics, comprising multiple specialized modules. As the product evolved, maintaining a cohesive experience across its interfaces became increasingly challenging.</p>
+        <p class="intro-text">I initiated the development of a design system to bring greater structure to the product’s interface patterns and establish a shared reference for design, development, and AI-assisted prototyping.</p>
+      </section>
+    </div>
+
+    <div class="project-gallery">
+
+      <div class="gallery-row row-1">
+        <div class="gallery-img"></div>
+      </div>
+
+    </div>
+
+    <section class="project-details">
+      <div class="project-details-col">
+        <div class="detail-block">
+          <p class="info-label">The challenge</p>
+          <p class="intro-text detail-sub">Scaling a product without a shared design language</p>
+          <p class="intro-text">Before the design system, interface consistency relied heavily on individual adjustments. Developers created new screens, and I would then refine their interfaces to align them with the intended design.</p>
+          <p class="intro-text">This reactive process made consistency harder to maintain as the platform grew. Visual properties and interaction patterns could vary between modules, while the lack of centralized documentation made it more difficult to translate design decisions into code consistently.</p>
+          <p class="intro-text">AI-assisted prototyping added another layer of complexity: without clearly defined components and composition rules, generated interfaces could introduce patterns that diverged from the existing product.</p>
+          <p class="intro-text">The challenge was to move from screen-by-screen corrections toward a repeatable approach to building and maintaining interfaces.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-gallery">
+
+      <div class="gallery-row row-1">
+        <div class="gallery-img"></div>
+      </div>
+
+    </div>
+
+    <section class="project-details">
+      <div class="project-details-col">
+        <div class="detail-block">
+          <p class="info-label">Solution</p>
+          <p class="intro-text detail-sub">Building a structured, reusable system</p>
+          <p class="intro-text">I developed the design system around Atomic Design, organizing its visual foundations, reusable components, and screen templates into a documented framework.</p>
+          <p class="intro-text detail-sub">Foundations</p>
+          <p class="intro-text">I established the visual foundations, including typography, semantic colors, module-specific accents, and design tokens. Organized in Figma and CSS, these foundations provide a shared reference for visual properties across design and frontend implementation.</p>
+          <p class="intro-text detail-sub">Components &amp; templates</p>
+          <p class="intro-text">Using Atomic Design principles, I structured reusable components and templates for recurring interface patterns and workflows. The components are implemented with Blazor and DevExpress, while the templates provide consistent structures that can be adapted to different screens and modules.</p>
+          <p class="intro-text detail-sub">Documentation &amp; AI-assisted workflows</p>
+          <p class="intro-text">I documented component and template usage, properties, variants, and states. I also created CLAUDE.md to define how Claude should use the system when generating prototypes, including guidelines for component reuse, token usage, and composition.</p>
+          <p class="intro-text">This documentation connects the Figma library with the implementation and gives AI-assisted workflows a defined set of references to follow.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="project-gallery">
+
+      <div class="gallery-row row-1">
+        <div class="gallery-img"></div>
+      </div>
+
+    </div>
+
+    <section class="project-details">
+      <div class="project-details-col">
+        <div class="detail-block">
+          <p class="info-label">Impact</p>
+          <p class="intro-text detail-sub">From individual adjustments to a shared process</p>
+          <p class="intro-text">In less than two months, the project evolved from an empty prototyping kit into a structured design system connecting Figma, Blazor implementation, and AI-assisted prototyping.</p>
+          <p class="intro-text">The most significant change is the way new interfaces can be approached. Rather than relying primarily on visual corrections after development, the team now has documented components, templates, and guidelines to reference when building new screens. As Product Designer, I am responsible for maintaining and evolving this system as the product grows.</p>
+          <p class="intro-text">The system also establishes a common visual language across modules while preserving their individual identities, and provides Claude with clearer constraints for generating prototypes aligned with the product.</p>
+          <p class="intro-text detail-sub">Key learnings</p>
+          <ul class="detail-list">
+            <li class="intro-text"><span class="lead">A design system needs clear usage rules.</span> Reusable components alone are not enough; documentation helps ensure they are applied consistently.</li>
+            <li class="intro-text"><span class="lead">Design and code require continuous alignment.</span> Comparing specifications with implementation helps identify discrepancies and maintain a reliable shared reference.</li>
+            <li class="intro-text"><span class="lead">AI-assisted workflows need defined constraints.</span> Documented components, tokens, and composition rules help keep generated interfaces aligned with the system.</li>
+          </ul>
+          <p class="intro-text">The project is ongoing. The next steps are to refine the system, validate its adoption across the platform, and measure its impact on delivery efficiency.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>© Florencia Ceresa | 2026</p>
+  </footer>
+
+</div>
+<script src="js/nav.js"></script>
+</body>
+</html>
