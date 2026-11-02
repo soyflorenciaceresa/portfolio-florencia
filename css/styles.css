@@ -661,8 +661,16 @@ p, h1, h2, h3 {
 
 @media (max-width: 640px) {
 
+  /* centered on the screen itself, not on the area below the fixed header */
   .hero-text {
     width: 90%;
+    top: calc(50% - var(--header-h) / 2);
+  }
+
+  /* location, year, role and scope stack in a single column */
+  .project-info {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
   }
 
   .ph-2 {
@@ -677,28 +685,31 @@ p, h1, h2, h3 {
 
   .ph-4 {
     left: 36.6% !important;
-    top: 23.7% !important;
+    top: 1% !important;
     width: 19.2% !important;
   }
 
   .ph-5 {
-    top: 56% !important;
+    top: 20.4% !important;
     width: 25% !important;
   }
 
   .ph-6 {
     left: auto !important;
     right: 0 !important;
-    top: 23% !important;
+    top: 12.6% !important;
     width: 26% !important;
   }
 
   .ph-7 {
-    width: 41.2% !important;
+    left: auto !important;
+    right: 20px !important;
+    width: 34% !important;
   }
 
   .ph-8 {
-    bottom: 40px !important;
+    left: 7.25% !important;
+    bottom: 60px !important;
     width: 26.4% !important;
   }
 
