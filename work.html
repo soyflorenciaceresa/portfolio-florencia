@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Work — Florencia Ceresa</title>
-<link rel="stylesheet" href="css/styles.css?v=75">
+<link rel="stylesheet" href="css/styles.css?v=105">
 </head>
 <body>
 <div class="site">
@@ -23,11 +23,16 @@
 
   <main class="work-content">
 
-    <p class="work-heading">Selected projects in product design, design systems and web, from creative studios to enterprise platforms.</p>
+    <p class="work-heading" data-product="Selected projects in product design, design systems and web, from creative studios to enterprise platforms." data-graphic="Selected projects in branding, visual identity and graphic design, from concept to final execution.">Selected projects in product design, design systems and web, from creative studios to enterprise platforms.</p>
+
+    <div class="work-filters" role="group" aria-label="Filter projects">
+      <button type="button" class="work-filter" data-filter="product" aria-pressed="true">Product design</button>
+      <button type="button" class="work-filter" data-filter="graphic" aria-pressed="false">Graphic design</button>
+    </div>
 
     <div class="work-grid">
 
-      <article class="work-item" data-category="branding">
+      <article class="work-item" data-category="product">
         <a href="work-lucila-barattini.html">
           <div class="work-thumb">
             <img src="images/work-lucila-barattini-v2.webp" alt="">
@@ -38,7 +43,7 @@
         </a>
       </article>
 
-      <article class="work-item" data-category="uxui">
+      <article class="work-item" data-category="product">
         <a href="work-better-together-homes.html">
           <div class="work-thumb">
             <img src="images/work-better-together-homes-v2.webp" alt="">
@@ -49,7 +54,7 @@
         </a>
       </article>
 
-      <article class="work-item" data-category="uxui">
+      <article class="work-item" data-category="product">
         <a href="work-pharo-software.html">
           <div class="work-thumb">
             <img src="images/work-pharo-software.webp" alt="">
@@ -60,7 +65,7 @@
         </a>
       </article>
 
-      <article class="work-item" data-category="branding">
+      <article class="work-item" data-category="product">
         <div class="work-thumb">
           <img src="images/work-enlace-studio.png" alt="">
         </div>
@@ -69,7 +74,7 @@
         <p class="work-tag">Web design · Coming soon</p>
       </article>
 
-      <article class="work-item" data-category="branding">
+      <article class="work-item" data-category="product">
         <a href="work-josefina-devoto.html">
           <div class="work-thumb">
             <img src="images/work-josefina-devoto.webp" alt="">
@@ -80,7 +85,7 @@
         </a>
       </article>
 
-      <article class="work-item" data-category="uxui">
+      <article class="work-item" data-category="product">
         <div class="work-thumb">
           <img src="images/work-ux-strategy.png" alt="">
         </div>
@@ -89,7 +94,7 @@
         <p class="work-tag">UX Strategy · Coming soon</p>
       </article>
 
-      <article class="work-item" data-category="uxui">
+      <article class="work-item" data-category="product">
         <a href="work-central-de-pasajes.html">
           <div class="work-thumb">
             <img src="images/work-central-de-pasajes.webp" alt="">
@@ -100,13 +105,69 @@
         </a>
       </article>
 
-      <article class="work-item" data-category="uxui">
+      <article class="work-item" data-category="product">
         <div class="work-thumb">
           <img src="images/work-pharo-design-system-v2.png" alt="">
         </div>
         <p class="work-number">008</p>
         <p class="work-title">From a fragmented SaaS platform to a unified design system</p>
         <p class="work-tag">Design system · Coming soon</p>
+      </article>
+
+
+      <article class="work-item" data-category="graphic" hidden>
+        <a href="work-kaira-surf-lodge.html">
+          <div class="work-thumb">
+            <img src="images/work-kaira-surf-lodge.webp" alt="">
+          </div>
+          <p class="work-number">001</p>
+          <p class="work-title">Kaira Surf Lodge</p>
+          <p class="work-tag">Branding</p>
+        </a>
+      </article>
+
+      <article class="work-item" data-category="graphic" hidden>
+        <a href="work-influence-energy.html">
+          <div class="work-thumb">
+            <img src="images/work-influence-energy.webp" alt="">
+          </div>
+          <p class="work-number">002</p>
+          <p class="work-title">Influence Energy</p>
+          <p class="work-tag">Rebranding</p>
+        </a>
+      </article>
+
+      <article class="work-item" data-category="graphic" hidden>
+        <a href="work-monada.html">
+          <div class="work-thumb">
+            <img src="images/work-monada.webp" alt="">
+          </div>
+          <p class="work-number">003</p>
+          <p class="work-title">Monada</p>
+          <p class="work-tag">Branding</p>
+        </a>
+      </article>
+
+      <article class="work-item" data-category="graphic" hidden>
+        <a href="work-bt-homes.html">
+          <div class="work-thumb">
+            <img src="images/work-bt-homes.webp" alt="">
+          </div>
+          <p class="work-number">004</p>
+          <p class="work-title">BT Homes</p>
+          <p class="work-tag">Rebranding</p>
+        </a>
+      </article>
+
+      <article class="work-item" data-category="graphic" hidden>
+        <a href="work-grupo-urbex.html">
+          <div class="work-thumb">
+            <img src="images/work-grupo-urbex.webp" alt="">
+          </div>
+          <p class="work-number">005</p>
+          <p class="work-title">Grupo Urbex</p>
+          <p class="work-tag">Branding</p>
+        </a>
       </article>
 
     </div>
@@ -119,5 +180,6 @@
 
 </div>
 <script src="js/nav.js"></script>
+<script src="js/work-filter.js"></script>
 </body>
 </html>

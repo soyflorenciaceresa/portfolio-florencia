@@ -294,8 +294,34 @@ p, h1, h2, h3 {
   font-weight: 400;
 }
 
+.work-filters {
+  margin-top: 18vh;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.work-filter {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #8a8a8a;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.work-filter:hover,
+.work-filter[aria-pressed="true"] {
+  color: #1a1a1a;
+}
+
+.work-item[hidden] {
+  display: none;
+}
+
 .work-grid {
-  margin-top: calc(18vh + 2.4rem);
+  margin-top: 1.25rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 0.75rem;
@@ -643,8 +669,11 @@ p, h1, h2, h3 {
     max-width: 100%;
   }
 
+  .work-filters {
+    margin-top: 48px;
+  }
+
   .work-grid {
-    margin-top: 86px;
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 10px;
   }
@@ -689,15 +718,17 @@ p, h1, h2, h3 {
     width: 19.2% !important;
   }
 
+  /* upper images stay above the phrase: their bottom edge never goes past
+     (phrase centre - ~50px half-height - 20px gap) on short screens */
   .ph-5 {
-    top: 20.4% !important;
+    top: max(8px, min(20.4%, calc(50% - 98px - 31.25vw))) !important;
     width: 25% !important;
   }
 
   .ph-6 {
     left: auto !important;
     right: 0 !important;
-    top: 12.6% !important;
+    top: max(8px, min(12.6%, calc(50% - 98px - 32.5vw))) !important;
     width: 26% !important;
   }
 
@@ -781,8 +812,15 @@ p, h1, h2, h3 {
     padding: 4px 20px 0;
   }
 
+  .work-filters {
+    margin-top: 96px;
+  }
+
+  .work-filter {
+    font-size: 0.8rem;
+  }
+
   .work-grid {
-    margin-top: 130px;
     grid-template-columns: 1fr;
     gap: 32px;
   }
